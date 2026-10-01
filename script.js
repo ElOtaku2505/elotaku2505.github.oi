@@ -1,4 +1,3 @@
-
 let language = "es";
 
 const languageBtn = document.getElementById("languageBtn");
