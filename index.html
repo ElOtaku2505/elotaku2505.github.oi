@@ -1,0 +1,843 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prolog | Guía Bilingüe</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                PROLOG
+            </div>
+
+            <div class="nav-actions">
+                <button id="languageBtn" class="language-btn">🇺🇸 English</button>
+                <button id="themeBtn" class="theme-btn">🌙</button>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-badge" data-es="PROGRAMACIÓN LÓGICA" data-en="LOGIC PROGRAMMING">
+                PROGRAMACIÓN LÓGICA
+            </div>
+
+            <h1 data-es="Prolog y sus Paradigmas"
+                data-en="Prolog and its Paradigms">
+                Prolog y sus Paradigmas
+            </h1>
+
+            <p data-es="Guía web bilingüe sobre conceptos del paradigma funcional y lógico."
+               data-en="Bilingual web guide about functional and logic programming concepts.">
+                Guía web bilingüe sobre conceptos del paradigma funcional y lógico.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#funcional" class="primary-btn"
+                   data-es="Paradigma Funcional"
+                   data-en="Functional Paradigm">
+                    Paradigma Funcional
+                </a>
+
+                <a href="#logico" class="secondary-btn"
+                   data-es="Paradigma Lógico"
+                   data-en="Logic Paradigm">
+                    Paradigma Lógico
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="intro section">
+            <div class="section-title">
+                <span class="section-number">01</span>
+                <div>
+                    <span class="mini-title"
+                          data-es="INTRODUCCIÓN"
+                          data-en="INTRODUCTION">
+                        INTRODUCCIÓN
+                    </span>
+
+                    <h2 data-es="¿Qué es Prolog?"
+                        data-en="What is Prolog?">
+                        ¿Qué es Prolog?
+                    </h2>
+                </div>
+            </div>
+
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <p data-es="Prolog es un lenguaje de programación basado principalmente en el paradigma lógico. En lugar de indicar paso a paso cómo realizar una tarea, el programador describe hechos, reglas y relaciones que representan un problema."
+                       data-en="Prolog is a programming language mainly based on the logic paradigm. Instead of specifying step by step how to perform a task, the programmer describes facts, rules and relationships that represent a problem.">
+                        Prolog es un lenguaje de programación basado principalmente en el paradigma lógico. En lugar de indicar paso a paso cómo realizar una tarea, el programador describe hechos, reglas y relaciones que representan un problema.
+                    </p>
+
+                    <p data-es="Esta página presenta conceptos del paradigma funcional y del paradigma lógico para comprender sus características y diferencias."
+                       data-en="This page presents concepts from the functional and logic paradigms to understand their characteristics and differences.">
+                        Esta página presenta conceptos del paradigma funcional y del paradigma lógico para comprender sus características y diferencias.
+                    </p>
+                </div>
+
+                <div class="prolog-symbol">
+                    <div class="symbol-circle">?</div>
+                    <strong>QUERY</strong>
+                    <span data-es="Pregunta al conocimiento"
+                          data-en="Ask the knowledge base">
+                        Pregunta al conocimiento
+                    </span>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="funcional" class="paradigm-section functional">
+            <div class="section-header">
+                <div>
+                    <span class="mini-title"
+                          data-es="PARADIGMA 01"
+                          data-en="PARADIGM 01">
+                        PARADIGMA 01
+                    </span>
+
+                    <h2 data-es="Paradigma Funcional"
+                        data-en="Functional Paradigm">
+                        Paradigma Funcional
+                    </h2>
+
+                    <p data-es="Conceptos fundamentales de la programación funcional."
+                       data-en="Fundamental concepts of functional programming.">
+                        Conceptos fundamentales de la programación funcional.
+                    </p>
+                </div>
+
+                <div class="paradigm-icon">λ</div>
+            </div>
+
+            <div class="search-container">
+                <input type="text"
+                       id="searchInput"
+                       placeholder="Buscar concepto..."
+                       data-placeholder-es="Buscar concepto..."
+                       data-placeholder-en="Search concept...">
+                <span>⌕</span>
+            </div>
+
+            <div class="cards-grid" id="functionalCards">
+
+                <article class="concept-card" data-concept="monadas monads">
+                    <div class="card-top">
+                        <span class="concept-number">01</span>
+                        <span class="concept-tag">FUNCTIONAL</span>
+                    </div>
+
+                    <h3 data-es="Mónadas"
+                        data-en="Monads">
+                        Mónadas
+                    </h3>
+
+                    <h4>Monads</h4>
+
+                    <p data-es="Una mónada es una estructura que permite representar valores junto con un contexto y encadenar operaciones sobre ellos. Es común utilizarla para manejar efectos como errores, valores opcionales o estados."
+                       data-en="A monad is a structure that represents values together with a context and allows operations to be chained. It is commonly used to handle effects such as errors, optional values or state.">
+                        Una mónada es una estructura que permite representar valores junto con un contexto y encadenar operaciones sobre ellos. Es común utilizarla para manejar efectos como errores, valores opcionales o estados.
+                    </p>
+
+                    <div class="code-box">
+                        <div class="code-title">PROLOG</div>
+                        <pre><code>resultado(X, Y) :-
+    X &gt; 0,
+    Y is X * 2.</code></pre>
+                    </div>
+
+                    <button class="details-btn"
+                            data-es="Ver explicación"
+                            data-en="View explanation">
+                        Ver explicación
+                    </button>
+
+                    <div class="extra-info">
+                        <p data-es="La idea principal es encadenar operaciones manteniendo el contexto del cálculo."
+                           data-en="The main idea is to chain operations while preserving the context of the computation.">
+                            La idea principal es encadenar operaciones manteniendo el contexto del cálculo.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="concept-card" data-concept="funciones orden superior higher order functions">
+                    <div class="card-top">
+                        <span class="concept-number">02</span>
+                        <span class="concept-tag">FUNCTIONAL</span>
+                    </div>
+
+                    <h3 data-es="Funciones de Orden Superior"
+                        data-en="Higher-Order Functions">
+                        Funciones de Orden Superior
+                    </h3>
+
+                    <h4>Higher-Order Functions</h4>
+
+                    <p data-es="Son funciones que pueden recibir otras funciones como argumentos o devolver una función como resultado. Este concepto permite construir operaciones más flexibles y reutilizables."
+                       data-en="These are functions that can receive other functions as arguments or return a function as a result. This concept allows more flexible and reusable operations.">
+                        Son funciones que pueden recibir otras funciones como argumentos o devolver una función como resultado. Este concepto permite construir operaciones más flexibles y reutilizables.
+                    </p>
+
+                    <div class="code-box">
+                        <div class="code-title">PROLOG</div>
+                        <pre><code>aplicar(F, X, Resultado) :-
+    call(F, X, Resultado).
+
+doble(X, R) :-
+    R is X * 2.</code></pre>
+                    </div>
+
+                    <button class="details-btn"
+                            data-es="Ver explicación"
+                            data-en="View explanation">
+                        Ver explicación
+                    </button>
+
+                    <div class="extra-info">
+                        <p data-es="En Prolog, call/3 permite ejecutar un predicado recibido como argumento."
+                           data-en="In Prolog, call/3 allows a predicate received as an argument to be executed.">
+                            En Prolog, call/3 permite ejecutar un predicado recibido como argumento.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="concept-card" data-concept="evaluacion perezosa lazy evaluation">
+                    <div class="card-top">
+                        <span class="concept-number">03</span>
+                        <span class="concept-tag">FUNCTIONAL</span>
+                    </div>
+
+                    <h3 data-es="Evaluación Perezosa"
+                        data-en="Lazy Evaluation">
+                        Evaluación Perezosa
+                    </h3>
+
+                    <h4>Lazy Evaluation</h4>
+
+                    <p data-es="La evaluación perezosa consiste en retrasar el cálculo de una expresión hasta que su resultado sea realmente necesario."
+                       data-en="Lazy evaluation consists of delaying the calculation of an expression until its result is actually needed.">
+                        La evaluación perezosa consiste en retrasar el cálculo de una expresión hasta que su resultado sea realmente necesario.
+                    </p>
+
+                    <div class="code-box">
+                        <div class="code-title">PROLOG</div>
+                        <pre><code>numero(1).
+numero(2).
+numero(3).
+
+consulta(X) :-
+    numero(X),
+    X &gt; 1.</code></pre>
+                    </div>
+
+                    <button class="details-btn"
+                            data-es="Ver explicación"
+                            data-en="View explanation">
+                        Ver explicación
+                    </button>
+
+                    <div class="extra-info">
+                        <p data-es="Prolog utiliza búsqueda bajo demanda mediante consultas y backtracking, aunque su modelo de evaluación no es idéntico al de los lenguajes funcionales perezosos."
+                           data-en="Prolog uses demand-driven search through queries and backtracking, although its evaluation model is not identical to lazy functional languages.">
+                            Prolog utiliza búsqueda bajo demanda mediante consultas y backtracking, aunque su modelo de evaluación no es idéntico al de los lenguajes funcionales perezosos.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="concept-card" data-concept="inmutabilidad immutability">
+                    <div class="card-top">
+                        <span class="concept-number">04</span>
+                        <span class="concept-tag">FUNCTIONAL</span>
+                    </div>
+
+                    <h3 data-es="Inmutabilidad"
+                        data-en="Immutability">
+                        Inmutabilidad
+                    </h3>
+
+                    <h4>Immutability</h4>
+
+                    <p data-es="La inmutabilidad significa que un valor no se modifica después de haber sido creado. En programación funcional se busca trabajar con valores que no cambian."
+                       data-en="Immutability means that a value is not modified after it has been created. Functional programming aims to work with values that do not change.">
+                        La inmutabilidad significa que un valor no se modifica después de haber sido creado. En programación funcional se busca trabajar con valores que no cambian.
+                    </p>
+
+                    <div class="code-box">
+                        <div class="code-title">PROLOG</div>
+                        <pre><code>persona(raul).
+
+nombre(Persona, Nombre) :-
+    Persona = raul,
+    Nombre = "Raul".</code></pre>
+                    </div>
+
+                    <button class="details-btn"
+                            data-es="Ver explicación"
+                            data-en="View explanation">
+                        Ver explicación
+                    </button>
+
+                    <div class="extra-info">
+                        <p data-es="Las variables de Prolog se comportan de una manera distinta a las variables imperativas: una vez instanciadas, no se reasignan."
+                           data-en="Prolog variables behave differently from imperative variables: once instantiated, they are not reassigned.">
+                            Las variables de Prolog se comportan de una manera distinta a las variables imperativas: una vez instanciadas, no se reasignan.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="concept-card" data-concept="currificacion currying">
+                    <div class="card-top">
+                        <span class="concept-number">05</span>
+                        <span class="concept-tag">FUNCTIONAL</span>
+                    </div>
+
+                    <h3 data-es="Currificación"
+                        data-en="Currying">
+                        Currificación
+                    </h3>
+
+                    <h4>Currying</h4>
+
+                    <p data-es="La currificación transforma una función que recibe varios argumentos en una secuencia de funciones que reciben un argumento cada una."
+                       data-en="Currying transforms a function that receives several arguments into a sequence of functions that each receive one argument.">
+                        La currificación transforma una función que recibe varios argumentos en una secuencia de funciones que reciben un argumento cada una.
+                    </p>
+
+                    <div class="code-box">
+                        <div class="code-title">CONCEPTO</div>
+                        <pre><code>f(x, y)
+↓
+f(x) → g(y)</code></pre>
+                    </div>
+
+                    <button class="details-btn"
+                            data-es="Ver explicación"
+                            data-en="View explanation">
+                        Ver explicación
+                    </button>
+
+                    <div class="extra-info">
+                        <p data-es="Prolog no utiliza la currificación como mecanismo principal, pero el concepto puede compararse con predicados que reciben argumentos progresivamente."
+                           data-en="Prolog does not use currying as its main mechanism, but the concept can be compared with predicates receiving arguments progressively.">
+                            Prolog no utiliza la currificación como mecanismo principal, pero el concepto puede compararse con predicados que reciben argumentos progresivamente.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="concept-card" data-concept="clausuras closures">
+                    <div class="card-top">
+                        <span class="concept-number">06</span>
+                        <span class="concept-tag">FUNCTIONAL</span>
+                    </div>
+
+                    <h3 data-es="Clausuras"
+                        data-en="Closures">
+                        Clausuras
+                    </h3>
+
+                    <h4>Closures</h4>
+
+                    <p data-es="Una clausura es una función que conserva acceso a las variables del entorno donde fue creada, incluso cuando se utiliza posteriormente."
+                       data-en="A closure is a function that retains access to variables from the environment where it was created, even when used later.">
+                        Una clausura es una función que conserva acceso a las variables del entorno donde fue creada, incluso cuando se utiliza posteriormente.
+                    </p>
+
+                    <div class="code-box">
+                        <div class="code-title">IDEA</div>
+                        <pre><code>crearFuncion(X)
+        ↓
+función + entorno
+        ↓
+resultado</code></pre>
+                    </div>
+
+                    <button class="details-btn"
+                            data-es="Ver explicación"
+                            data-en="View explanation">
+                        Ver explicación
+                    </button>
+
+                    <div class="extra-info">
+                        <p data-es="Las clausuras son especialmente comunes en lenguajes funcionales como JavaScript, aunque Prolog posee mecanismos diferentes para representar relaciones y contexto."
+                           data-en="Closures are especially common in functional languages such as JavaScript, while Prolog uses different mechanisms to represent relationships and context.">
+                            Las clausuras son especialmente comunes en lenguajes funcionales como JavaScript, aunque Prolog posee mecanismos diferentes para representar relaciones y contexto.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <section id="logico" class="paradigm-section logic">
+            <div class="section-header">
+                <div>
+                    <span class="mini-title"
+                          data-es="PARADIGMA 02"
+                          data-en="PARADIGM 02">
+                        PARADIGMA 02
+                    </span>
+
+                    <h2 data-es="Paradigma Lógico"
+                        data-en="Logic Paradigm">
+                        Paradigma Lógico
+                    </h2>
+
+                    <p data-es="Los conceptos fundamentales utilizados por Prolog."
+                       data-en="The fundamental concepts used by Prolog.">
+                        Los conceptos fundamentales utilizados por Prolog.
+                    </p>
+                </div>
+
+                <div class="paradigm-icon">?</div>
+            </div>
+
+
+            <div class="cards-grid" id="logicCards">
+
+                <article class="concept-card logic-card" data-concept="cortes cut">
+                    <div class="card-top">
+                        <span class="concept-number">07</span>
+                        <span class="concept-tag logic-tag">LOGIC</span>
+                    </div>
+
+                    <h3 data-es="Cortes /"
+                        data-en="Cut /">
+                        Cortes /
+                    </h3>
+
+                    <h4>Cut</h4>
+
+                    <p data-es="El corte ! es un operador de Prolog que permite controlar el backtracking. Indica que ciertas alternativas anteriores ya no deben explorarse."
+                       data-en="The cut ! is a Prolog operator that controls backtracking. It indicates that certain previous alternatives should no longer be explored.">
+                        El corte ! es un operador de Prolog que permite controlar el backtracking. Indica que ciertas alternativas anteriores ya no deben explorarse.
+                    </p>
+
+                    <div class="code-box">
+                        <div class="code-title">PROLOG</div>
+                        <pre><code>mayor(X, Y, X) :-
+    X &gt;= Y, !.
+
+mayor(X, Y, Y) :-
+    X &lt; Y.</code></pre>
+                    </div>
+
+                    <button class="details-btn"
+                            data-es="Ver explicación"
+                            data-en="View explanation">
+                        Ver explicación
+                    </button>
+
+                    <div class="extra-info">
+                        <p data-es="Cuando Prolog encuentra !, descarta determinadas alternativas de búsqueda relacionadas con esa regla."
+                           data-en="When Prolog finds !, it discards certain search alternatives associated with that rule.">
+                            Cuando Prolog encuentra !, descarta determinadas alternativas de búsqueda relacionadas con esa regla.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="concept-card logic-card" data-concept="hechos facts">
+                    <div class="card-top">
+                        <span class="concept-number">08</span>
+                        <span class="concept-tag logic-tag">LOGIC</span>
+                    </div>
+
+                    <h3 data-es="Hechos"
+                        data-en="Facts">
+                        Hechos
+                    </h3>
+
+                    <h4>Facts</h4>
+
+                    <p data-es="Los hechos son afirmaciones que representan información conocida. En Prolog se escriben normalmente como predicados terminados en punto."
+                       data-en="Facts are statements representing known information. In Prolog they are normally written as predicates ending with a period.">
+                        Los hechos son afirmaciones que representan información conocida. En Prolog se escriben normalmente como predicados terminados en punto.
+                    </p>
+
+                    <div class="code-box">
+                        <div class="code-title">PROLOG</div>
+                        <pre><code>animal(perro).
+animal(gato).
+animal(pez).</code></pre>
+                    </div>
+
+                    <button class="details-btn"
+                            data-es="Ver explicación"
+                            data-en="View explanation">
+                        Ver explicación
+                    </button>
+
+                    <div class="extra-info">
+                        <p data-es="Estos hechos forman parte de la base de conocimiento de Prolog."
+                           data-en="These facts are part of Prolog's knowledge base.">
+                            Estos hechos forman parte de la base de conocimiento de Prolog.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="concept-card logic-card" data-concept="reglas rules">
+                    <div class="card-top">
+                        <span class="concept-number">09</span>
+                        <span class="concept-tag logic-tag">LOGIC</span>
+                    </div>
+
+                    <h3 data-es="Reglas"
+                        data-en="Rules">
+                        Reglas
+                    </h3>
+
+                    <h4>Rules</h4>
+
+                    <p data-es="Las reglas permiten expresar relaciones lógicas. Una regla establece que una conclusión es verdadera cuando se cumplen una o más condiciones."
+                       data-en="Rules express logical relationships. A rule states that a conclusion is true when one or more conditions are satisfied.">
+                        Las reglas permiten expresar relaciones lógicas. Una regla establece que una conclusión es verdadera cuando se cumplen una o más condiciones.
+                    </p>
+
+                    <div class="code-box">
+                        <div class="code-title">PROLOG</div>
+                        <pre><code>padre(juan, pedro).
+padre(pedro, ana).
+
+abuelo(X, Y) :-
+    padre(X, Z),
+    padre(Z, Y).</code></pre>
+                    </div>
+
+                    <button class="details-btn"
+                            data-es="Ver explicación"
+                            data-en="View explanation">
+                        Ver explicación
+                    </button>
+
+                    <div class="extra-info">
+                        <p data-es="La regla abuelo/2 puede encontrar relaciones de abuelo utilizando dos relaciones padre/2."
+                           data-en="The grandfather/2 rule can find grandfather relationships by using two parent/2 relationships.">
+                            La regla abuelo/2 puede encontrar relaciones de abuelo utilizando dos relaciones padre/2.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="concept-card logic-card" data-concept="unificacion unification">
+                    <div class="card-top">
+                        <span class="concept-number">10</span>
+                        <span class="concept-tag logic-tag">LOGIC</span>
+                    </div>
+
+                    <h3 data-es="Unificación"
+                        data-en="Unification">
+                        Unificación
+                    </h3>
+
+                    <h4>Unification</h4>
+
+                    <p data-es="La unificación es el proceso mediante el cual Prolog intenta hacer que dos términos sean iguales asignando valores a las variables cuando es posible."
+                       data-en="Unification is the process by which Prolog attempts to make two terms equal by assigning values to variables when possible.">
+                        La unificación es el proceso mediante el cual Prolog intenta hacer que dos términos sean iguales asignando valores a las variables cuando es posible.
+                    </p>
+
+                    <div class="code-box">
+                        <div class="code-title">PROLOG</div>
+                        <pre><code>?- X = juan.
+
+X = juan.</code></pre>
+                    </div>
+
+                    <button class="details-btn"
+                            data-es="Ver explicación"
+                            data-en="View explanation">
+                        Ver explicación
+                    </button>
+
+                    <div class="extra-info">
+                        <p data-es="En la consulta X = juan, Prolog unifica la variable X con el átomo juan."
+                           data-en="In the query X = juan, Prolog unifies variable X with the atom juan.">
+                            En la consulta X = juan, Prolog unifica la variable X con el átomo juan.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="concept-card logic-card" data-concept="clausulas horn horn clauses">
+                    <div class="card-top">
+                        <span class="concept-number">11</span>
+                        <span class="concept-tag logic-tag">LOGIC</span>
+                    </div>
+
+                    <h3 data-es="Cláusulas de Horn"
+                        data-en="Horn Clauses">
+                        Cláusulas de Horn
+                    </h3>
+
+                    <h4>Horn Clauses</h4>
+
+                    <p data-es="Una cláusula de Horn es una expresión lógica que contiene como máximo un literal positivo. Las reglas de Prolog se basan en este tipo de estructura lógica."
+                       data-en="A Horn clause is a logical expression containing at most one positive literal. Prolog rules are based on this type of logical structure.">
+                        Una cláusula de Horn es una expresión lógica que contiene como máximo un literal positivo. Las reglas de Prolog se basan en este tipo de estructura lógica.
+                    </p>
+
+                    <div class="code-box">
+                        <div class="code-title">PROLOG</div>
+                        <pre><code>humano(raul).
+
+estudiante(X) :-
+    humano(X).</code></pre>
+                    </div>
+
+                    <button class="details-btn"
+                            data-es="Ver explicación"
+                            data-en="View explanation">
+                        Ver explicación
+                    </button>
+
+                    <div class="extra-info">
+                        <p data-es="La estructura cabeza :- cuerpo representa una implicación lógica: si el cuerpo es verdadero, entonces la cabeza puede considerarse verdadera."
+                           data-en="The head :- body structure represents a logical implication: if the body is true, then the head can be considered true.">
+                            La estructura cabeza :- cuerpo representa una implicación lógica: si el cuerpo es verdadero, entonces la cabeza puede considerarse verdadera.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="concept-card logic-card" data-concept="backtracking vuelta atras">
+                    <div class="card-top">
+                        <span class="concept-number">12</span>
+                        <span class="concept-tag logic-tag">LOGIC</span>
+                    </div>
+
+                    <h3 data-es="Backtracking"
+                        data-en="Backtracking">
+                        Backtracking
+                    </h3>
+
+                    <h4>Vuelta atrás</h4>
+
+                    <p data-es="El backtracking es el mecanismo mediante el cual Prolog retrocede en su búsqueda cuando una alternativa no produce una solución, probando otras posibilidades."
+                       data-en="Backtracking is the mechanism by which Prolog goes back in its search when an alternative does not produce a solution, trying other possibilities.">
+                        El backtracking es el mecanismo mediante el cual Prolog retrocede en su búsqueda cuando una alternativa no produce una solución, probando otras posibilidades.
+                    </p>
+
+                    <div class="code-box">
+                        <div class="code-title">PROLOG</div>
+                        <pre><code>color(rojo).
+color(azul).
+color(verde).
+
+?- color(X).
+
+X = rojo ;
+X = azul ;
+X = verde.</code></pre>
+                    </div>
+
+                    <button class="details-btn"
+                            data-es="Ver explicación"
+                            data-en="Ver explicación">
+                        Ver explicación
+                    </button>
+
+                    <div class="extra-info">
+                        <p data-es="Cuando el usuario solicita otra solución con ;, Prolog retrocede y busca otra alternativa disponible."
+                           data-en="When the user requests another solution with ;, Prolog goes back and searches for another available alternative.">
+                            Cuando el usuario solicita otra solución con ;, Prolog retrocede y busca otra alternativa disponible.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <section class="demo-section section">
+            <div class="section-title">
+                <span class="section-number">03</span>
+
+                <div>
+                    <span class="mini-title"
+                          data-es="DEMO INTERACTIVA"
+                          data-en="INTERACTIVE DEMO">
+                        DEMO INTERACTIVA
+                    </span>
+
+                    <h2 data-es="Experimenta con Backtracking"
+                        data-en="Experiment with Backtracking">
+                        Experimenta con Backtracking
+                    </h2>
+                </div>
+            </div>
+
+            <div class="demo-box">
+
+                <div class="terminal">
+                    <div class="terminal-bar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <strong>SWI-PROLOG</strong>
+                    </div>
+
+                    <div class="terminal-content">
+                        <p><span class="prompt">?-</span> color(X).</p>
+
+                        <div id="demoResult" class="result">
+                            X = rojo
+                        </div>
+
+                        <button id="nextSolution"
+                                class="terminal-btn"
+                                data-es="Buscar siguiente solución →"
+                                data-en="Find next solution →">
+                            Buscar siguiente solución →
+                        </button>
+
+                        <button id="resetDemo"
+                                class="reset-btn"
+                                data-es="Reiniciar"
+                                data-en="Reset">
+                            Reiniciar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="demo-explanation">
+                    <span class="mini-title"
+                          data-es="¿CÓMO FUNCIONA?"
+                          data-en="HOW DOES IT WORK?">
+                        ¿CÓMO FUNCIONA?
+                    </span>
+
+                    <p data-es="Prolog encuentra una solución y puede regresar mediante backtracking para encontrar las siguientes."
+                       data-en="Prolog finds one solution and can use backtracking to find the following ones.">
+                        Prolog encuentra una solución y puede regresar mediante backtracking para encontrar las siguientes.
+                    </p>
+
+                    <div class="flow">
+                        <div>🔎<span>Consulta</span></div>
+                        <b>→</b>
+                        <div>🧠<span>Búsqueda</span></div>
+                        <b>→</b>
+                        <div>✅<span>Solución</span></div>
+                        <b>→</b>
+                        <div>↩️<span>Backtracking</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="comparison section">
+            <div class="section-title">
+                <span class="section-number">04</span>
+
+                <div>
+                    <span class="mini-title"
+                          data-es="COMPARACIÓN"
+                          data-en="COMPARISON">
+                        COMPARACIÓN
+                    </span>
+
+                    <h2 data-es="Funcional vs. Lógico"
+                        data-en="Functional vs. Logic">
+                        Funcional vs. Lógico
+                    </h2>
+                </div>
+            </div>
+
+            <div class="comparison-table">
+
+                <div class="table-row table-header">
+                    <div data-es="Característica" data-en="Feature">Característica</div>
+                    <div>Funcional</div>
+                    <div>Lógico</div>
+                </div>
+
+                <div class="table-row">
+                    <div data-es="Unidad principal" data-en="Main unit">Unidad principal</div>
+                    <div data-es="Funciones" data-en="Functions">Funciones</div>
+                    <div data-es="Relaciones y predicados" data-en="Relations and predicates">Relaciones y predicados</div>
+                </div>
+
+                <div class="table-row">
+                    <div data-es="Forma de resolver" data-en="Problem solving">Forma de resolver</div>
+                    <div data-es="Evaluación de funciones" data-en="Function evaluation">Evaluación de funciones</div>
+                    <div data-es="Inferencia lógica" data-en="Logical inference">Inferencia lógica</div>
+                </div>
+
+                <div class="table-row">
+                    <div data-es="Variables" data-en="Variables">Variables</div>
+                    <div data-es="Frecuentemente inmutables" data-en="Often immutable">Frecuentemente inmutables</div>
+                    <div data-es="Se instancian mediante unificación" data-en="Instantiated through unification">Se instancian mediante unificación</div>
+                </div>
+
+                <div class="table-row">
+                    <div data-es="Búsqueda" data-en="Search">Búsqueda</div>
+                    <div data-es="Depende del lenguaje" data-en="Depends on the language">Backtracking</div>
+                    <div data-es="Backtracking" data-en="Backtracking">Backtracking</div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="glossary section">
+            <div class="glossary-box">
+                <div>
+                    <span class="mini-title"
+                          data-es="GLOSARIO"
+                          data-en="GLOSSARY">
+                        GLOSARIO
+                    </span>
+
+                    <h2 data-es="Prolog en dos idiomas"
+                        data-en="Prolog in two languages">
+                        Prolog en dos idiomas
+                    </h2>
+                </div>
+
+                <div class="glossary-list">
+                    <span>Hecho → Fact</span>
+                    <span>Regla → Rule</span>
+                    <span>Unificación → Unification</span>
+                    <span>Vuelta atrás → Backtracking</span>
+                    <span>Corte → Cut</span>
+                    <span>Predicado → Predicate</span>
+                    <span>Consulta → Query</span>
+                    <span>Variable → Variable</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="footer-logo">PROLOG</div>
+
+        <p data-es="Instrumento web bilingüe de conceptos de programación."
+           data-en="Bilingual web instrument about programming concepts.">
+            Instrumento web bilingüe de conceptos de programación.
+        </p>
+
+        <span>HTML • CSS • JavaScript</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
